@@ -113,9 +113,9 @@ int inputInt(const string &prompt, bool (*validator)(int)) {
 }
 
 void loadDataFromFile(const string &filename, vector<Phone> &phones) {
-    ifstream file(filename);
+    ifstream file("phones_data.txt");
     if (!file.is_open()) {
-        cerr << "Ошибка запуска файла: " << filename << endl;
+        cerr << "Ошибка запуска файла: " << "phones_data.txt" << endl;
         return;
     }
     
